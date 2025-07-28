@@ -18,7 +18,7 @@ def beta_probe_post(omega, beta_s, beta_m, gamma):
     den = (1.0 + exp_s) - (prod_term**(-1)) * (exp_s - exp_m_sum) -1
     if den <= 0 or num <= 0:
         return np.nan
-    return omega * np.log(num / den)
+    return omega**(-1) * np.log(num / den)
 
 # --------------------------------------------------------------------------- #
 # Parameters
