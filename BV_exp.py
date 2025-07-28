@@ -23,7 +23,7 @@ def beta_probe_post_detuned(omega, beta_s, beta_m, gamma, g=1.0):
 
     if den <= 0 or num <= 0:
         return np.nan
-    return omega * np.log(num / den)
+    return omega**(-1) * np.log(num / den)
 
 # --------------------------------------------------------------------------- #
 # Parameters
